@@ -13,7 +13,9 @@
 
 <style>
   #top {
-    background-image: url("https://mdbootstrap.com/img/new/fluid/city/018.jpg");
+    background-image: url("{% static 'img/Found_HomeBackground.JPG' %}");
+    background-size: 1300px 875px;
+    background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
     height: 100vh;
@@ -35,9 +37,9 @@
       <div class="text-white">
         <h1 class="mb-3">Found Spatial Institute</h1>
         <h5 class="mb-4">Learn to Make the Most of Space and Place</h5>
-        <a class="btn btn-outline-light btn-lg m-2" href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button"
+        <a class="btn btn-outline-light btn-lg m-2" href="#" role="button"
         rel="nofollow" target="_blank">About Us</a>
-        <a class="btn btn-outline-light btn-lg m-2" href="https://mdbootstrap.com/docs/standard/" target="_blank"
+        <a class="btn btn-outline-light btn-lg m-2" href="{% url 'blog-home' %}"
         role="button">Latest News</a>
       </div>
     </div>
@@ -54,7 +56,7 @@
     <div class="col-lg-4 col-md-12 mb-4">
       <div class="card">
         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-          <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
+          <img src="{% static 'img/Found_MountainBackground.JPG' %}" class="img-fluid" />
           <a href="#!">
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
           </a>
@@ -72,7 +74,7 @@
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card">
         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-          <img src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" class="img-fluid" />
+          <img src="{% static 'img/Found_OceanBackground.JPG' %}" class="img-fluid" />
           <a href="#!">
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
           </a>
@@ -90,7 +92,7 @@
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card">
         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-          <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
+          <img src="{% static 'img/Found_ChurchBackground.JPG' %}" class="img-fluid" />
           <a href="#!">
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
           </a>
