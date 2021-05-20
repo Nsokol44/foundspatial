@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<style media="screen">
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 600px;
+    display: block;
+  }
+</style>
+<link rel="stylesheet" href="{% static 'css/masthead.css' %}">
+
+<header class="masthead" style="background-image: url({{dronepost.droneImage.url}})">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="font-weight-light text-light">{{ dronepost.title }}</h1>
+        <!-- <p class="lead text-light">A great starter layout for a landing page</p> -->
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<h2 class="text-center">{{dronepost.description}}</h2>
+<video class="center" src="{{dronepost.droneVideo.url}}" controls autoplay >
+</video>
+<p class="text-center">{{dronepost.post}}</p>
+
+
+
+
+
+{% endblock content %}

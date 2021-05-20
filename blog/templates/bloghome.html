@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Blog Posts</h1>
+<div class="row">
+  {% for n in posts %}
+  <div class="col-md-4 d-flex align-items-stretch">
+    <div class="card border-secondary mx-2 my-4">
+      <img class="card-img-top" src="{{ n.image.url }}" alt="blogPic" height="250px" width="250px"/>
+        <div class="card-body">
+          <h1 class="card-title "> {{ n.title }} </h1>
+          <div class="row">
+            <p class="card-text col-md-5"> <strong>Description:</strong> {{ n.description }} </p>
+            <!-- <p class="card-text mx-3"> <strong>Distance:</strong>  </p> -->
+          </div>
+          <a href="{% url 'detail' n.slug %}" class="btn btn-success my-2">Read</a>
+          <a href="{{ n.link }}" class="btn btn-primary mx-2 my-2">Read on Medium</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

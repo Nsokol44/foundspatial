@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/masthead.css' %}">
+
+<header class="masthead" style="background-image: url({{post.image.url}})">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="font-weight-light text-light">{{ post.title }}</h1>
+        <!-- <p class="lead text-light">A great starter layout for a landing page</p> -->
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<h2 class="text-center">{{post.description}}</h2>
+<p class="text-center">{{post.post}}</p>
+
+{% for tag in post.tags.all %}
+<a href="#" class="badge badge-info" >{{ tag }}</a>
+{% endfor %}
+
+{% endblock content %}
